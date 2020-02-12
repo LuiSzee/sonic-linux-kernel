@@ -90,7 +90,12 @@ $(addprefix $(DEST)/, $(MAIN_TARGET)): $(DEST)/% :
 
 	# Learning new git repo head (above commit) by calling stg repair.
 	stg repair
+ifneq (,$(filter $(CONFIGURED_ARCH), armhf arm64))
+	stg import -s ../patch/series_$(CONFIGURED_ARCH)
+	[ -f series_$(CONFIGURED_PLATFORM) ] && stg import -s ../patch/series_$(CONFIGURED_PLATFORM)
+else
 	stg import -s ../patch/series
+endif
 
 	# Building a custom kernel from Debian kernel source
 	DO_DOCS=False fakeroot make -f debian/rules -j $(shell nproc) binary-indep
