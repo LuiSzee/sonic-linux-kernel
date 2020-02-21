@@ -1,2 +1,13 @@
-driver_centec_tsingma_soc.patch
-config_centec_tsingma_soc.patch
+centec_tsingma_soc_config.patch
+centec_tsingma_soc_ethernet.patch
+centec_tsingma_soc_gpio.patch
+centec_tsingma_soc_i2c.patch
+centec_tsingma_soc_memory.patch
+centec_tsingma_soc_mtd.patch
+centec_tsingma_soc_pinctrl.patch
+centec_tsingma_soc_platform.patch
+centec_tsingma_soc_pwm.patch
+centec_tsingma_soc_qspi.patch
+centec_tsingma_soc_rtc.patch
+centec_tsingma_soc_usb_host.patch
+centec_tsingma_soc_watchdog.patch
